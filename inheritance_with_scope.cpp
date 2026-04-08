@@ -1,0 +1,30 @@
+//with scope resolution
+#include<iostream>
+using namespace std;
+
+class Vehicle
+{
+public:
+    int speed;
+    void showSpeed();
+};
+void Vehicle::showSpeed()
+{
+    cout<<"Speed:"<<speed<<endl;
+}
+class Car: public Vehicle
+{
+public:
+    string brand;
+};
+int main()
+{
+    Car c1;
+
+    c1.brand="B M Bablu";
+    c1.speed=120;
+    cout<<"Brand:"<<c1.brand<<endl;
+    c1.showSpeed();
+
+    return 0;
+}
